@@ -6,7 +6,6 @@
 """
 
 from typing import Optional
-from flask import Flask
 
 class Company():
     """
@@ -23,12 +22,12 @@ class Company():
 
     """
 
-    def __init__(self, app: Optional[flask.app.Flask] = None):
+    def __init__(self, app = None):
         """Initiates a new instance."""
         if app is not None:
             self.init_app(app)
 
-    def init_app(self, app: flask.app.flask):
+    def init_app(self, app):
         """Initializes the application with the extension.
 
         Args:
