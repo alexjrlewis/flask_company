@@ -43,7 +43,9 @@ class Company():
         self.instagram = app.config.get('COMPANY_INSTAGRAM', '')
         self.facebook = app.config.get('COMPANY_FACEBOOK', '')
         self.whereby = app.config.get('COMPANY_WHEREBY', '')
-        self.logo_64 = app.config.get('COMPANY_LOGO_B64')
+        self.logo_b64 = f'data:image/png;base64,{app.config.get('COMPANY_LOGO_B64')}'
+
+    self.logo_64
 
     @property
     def twitter(self) -> str:
