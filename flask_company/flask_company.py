@@ -20,7 +20,7 @@ class Company():
         instagram: The instagram handle of the company.
         facebook: The facebook handle of the company.
         whereby: The whereby handle of the company.
-
+        logo_b64: The base64 version of the company logo.
     """
 
     def __init__(self, app = None):
@@ -43,9 +43,8 @@ class Company():
         self.instagram = app.config.get('COMPANY_INSTAGRAM', '')
         self.facebook = app.config.get('COMPANY_FACEBOOK', '')
         self.whereby = app.config.get('COMPANY_WHEREBY', '')
-        self.logo_b64 = f'data:image/png;base64,{app.config.get('COMPANY_LOGO_B64')}'
-
-    self.logo_64
+        logo_b64 = app.config.get('COMPANY_LOGO_B64')
+        self.logo_b64 = f'data:image/png;base64,{logo_b64}'
 
     @property
     def twitter(self) -> str:
