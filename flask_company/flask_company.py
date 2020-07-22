@@ -35,6 +35,7 @@ class Company():
             app: The Flask application object.
         """
         self.name = app.config.get('COMPANY_NAME', '')
+        self.phone = app.config.get('COMPANY_PHONE', '')
         self.email = app.config.get('COMPANY_EMAIL', '')
         self.address = app.config.get('COMPANY_ADDRESS', '')
         self.number = app.config.get('COMPANY_NUMBER', '')
